@@ -3,207 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naipunya | Portfolio</title>
+    <title>Naipu's Portfolio</title>
     <style>
-        /* General Styles */
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
+            background-color: #f9f9f9;
             color: #333;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        /* Hero Section */
-        header.hero {
-            background-color: #1a237e;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        header.hero h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-        header.hero p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-        /* Navigation */
-        nav.navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #283593;
-            padding: 15px 0;
-        }
-        nav.navbar a {
-            margin: 0 20px;
-            font-weight: bold;
-            color: white;
-            transition: 0.3s;
-        }
-        nav.navbar a:hover {
-            text-decoration: underline;
-        }
-        /* Section Styles */
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        section h2 {
-            color: #1f6f8b;
-            border-bottom: 2px solid #1f6f8b;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-        }
-        section p {
             line-height: 1.6;
         }
-        /* About Section */
-        .about {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: center;
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
         }
-        .about img {
+
+        header img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #1f6f8b;
             object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 20px;
         }
-        /* Projects Section */
-        .project-list {
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #4CAF50;
+        }
+
+        .about, .skills, .projects, .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skills-list span {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .projects-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-        .project-card {
-            background-color: #e8eaf6;
+
+        .project-item {
+            background-color: white;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
-        .project-card:hover {
-            transform: scale(1.05);
+
+        .project-item:hover {
+            transform: translateY(-5px);
         }
-        /* Skills */
-        .skills span {
-            display: inline-block;
-            background-color: #e3f2fd;
-            color: #0d47a1;
-            padding: 6px 12px;
-            margin: 5px;
-            border-radius: 6px;
-            font-size: 13px;
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: auto;
         }
-        /* Contact */
-        .contact a {
-            color: #1a237e;
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
         }
-        .contact a:hover {
-            text-decoration: underline;
+
+        .contact button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        /* Footer */
+
+        .contact button:hover {
+            background-color: #45a049;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #1a237e;
+            background-color: #333;
             color: white;
-            margin-top: 30px;
         }
-        /* Responsive */
-        @media(max-width: 768px) {
-            header.hero h1 {
-                font-size: 2rem;
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
             }
-            .about {
+            nav {
                 flex-direction: column;
-                text-align: center;
-            }
-            .about img {
-                margin: auto;
             }
         }
     </style>
 </head>
 <body>
 
-<!-- Hero -->
-<header class="hero">
-    <h1>Naipunya</h1>
-    <p>Bioinformatics | Data Science Enthusiast</p>
-</header>
+    <header>
+        <img src="profile.jpg" alt="Naipu Profile Photo">
+        <h1>Naipu</h1>
+        <p>Bioinformatics Enthusiast | Aspiring Data Scientist</p>
+    </header>
 
-<!-- Navigation -->
-<nav class="navbar">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<!-- About Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <div class="about">
-        <img src="profile.jpg" alt="Profile Picture">
-        <p>Hello! I am an undergraduate student passionate about Bioinformatics and Data Science. I have experience in computational biology, data analysis, and programming. I enjoy solving real-world problems using technology and research.</p>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-        <div class="project-card">
-            <h3>In-Silico Vaccine Design for Ebola Virus</h3>
-            <p>Designed and analyzed potential vaccine candidates using computational methods.</p>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about">
+            <p>Hello! I am Naipu, a passionate bioinformatics student eager to explore data science and computational biology. I enjoy working on research projects, analyzing datasets, and learning new technologies.</p>
         </div>
-        <div class="project-card">
-            <h3>Breast Cancer Research</h3>
-            <p>Literature review and analysis of breast cancer research papers, including data visualization and insights.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skills-list">
+                <span>Python</span>
+                <span>R</span>
+                <span>Data Analysis</span>
+                <span>Bioinformatics</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Machine Learning</span>
+                <span>SQL</span>
+            </div>
         </div>
-        <div class="project-card">
-            <h3>Mini Web-Based Resume Project</h3>
-            <p>Created a small web project using HTML, CSS, and JavaScript for displaying CV and skills.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="projects-list">
+                <div class="project-item">
+                    <h3>Breast Cancer Analysis</h3>
+                    <p>Performed data analysis on breast cancer datasets to identify key biomarkers.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Genome Data Visualization</h3>
+                    <p>Created interactive plots to visualize genomic variations using Python and R.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Protein Structure Prediction</h3>
+                    <p>Worked on predicting protein structures using bioinformatics algorithms and ML models.</p>
+                </div>
+            </div>
         </div>
-        <!-- Add more project cards here -->
-    </div>
-</section>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Python</span>
-        <span>R Programming</span>
-        <span>Bioinformatics Tools</span>
-        <span>Data Analysis</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-    </div>
-</section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:naipunya@example.com">naipunya@example.com</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/naipunya</a></p>
-</section>
-
-<!-- Footer -->
-<footer>
-    © 2025 Naipunya
-</footer>
+    <footer>
+        &copy; 2025 Naipu. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
