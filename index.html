@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naipu's Portfolio</title>
+    <title>Naipunya U | Portfolio</title>
     <style>
         /* Reset default styles */
         * {
@@ -22,13 +22,13 @@
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 40px 0;
+            padding: 50px 20px;
             text-align: center;
         }
 
         header img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid white;
@@ -36,7 +36,7 @@
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 10px;
         }
 
@@ -81,6 +81,11 @@
             gap: 20px;
         }
 
+        .about p {
+            text-align: center;
+            font-size: 1.1em;
+        }
+
         .skills-list {
             display: flex;
             flex-wrap: wrap;
@@ -107,11 +112,12 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
         }
 
         .contact form {
@@ -165,9 +171,9 @@
 <body>
 
     <header>
-        <img src="profile.jpg" alt="Naipu Profile Photo">
-        <h1>Naipu</h1>
-        <p>Bioinformatics Enthusiast | Aspiring Data Scientist</p>
+        <img src="profile.jpg" alt="Naipunya U Profile Photo">
+        <h1>Naipunya U</h1>
+        <p>Garden City University | BSc in Bioinformatics, Data Science & Statistics</p>
     </header>
 
     <nav>
@@ -180,7 +186,7 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="about">
-            <p>Hello! I am Naipu, a passionate bioinformatics student eager to explore data science and computational biology. I enjoy working on research projects, analyzing datasets, and learning new technologies.</p>
+            <p>Hello! I am <strong>Naipunya U</strong>, a BSc student in Bioinformatics, Data Science & Statistics at <strong>Garden City University</strong>. I am passionate about exploring data, working on research projects, and learning new computational biology techniques. I aim to create meaningful insights from complex biological data.</p>
         </div>
     </section>
 
@@ -196,6 +202,8 @@
                 <span>NumPy</span>
                 <span>Machine Learning</span>
                 <span>SQL</span>
+                <span>Data Visualization</span>
+                <span>Matplotlib</span>
             </div>
         </div>
     </section>
@@ -205,16 +213,16 @@
         <div class="projects">
             <div class="projects-list">
                 <div class="project-item">
-                    <h3>Breast Cancer Analysis</h3>
-                    <p>Performed data analysis on breast cancer datasets to identify key biomarkers.</p>
+                    <h3>Breast Cancer Data Analysis</h3>
+                    <p>Performed data analysis on breast cancer datasets to identify key biomarkers and patterns using Python and R.</p>
                 </div>
                 <div class="project-item">
                     <h3>Genome Data Visualization</h3>
-                    <p>Created interactive plots to visualize genomic variations using Python and R.</p>
+                    <p>Created interactive plots and visualizations for genomic variations using bioinformatics tools.</p>
                 </div>
                 <div class="project-item">
                     <h3>Protein Structure Prediction</h3>
-                    <p>Worked on predicting protein structures using bioinformatics algorithms and ML models.</p>
+                    <p>Worked on predicting protein structures using bioinformatics algorithms and machine learning models.</p>
                 </div>
             </div>
         </div>
@@ -233,7 +241,7 @@
     </section>
 
     <footer>
-        &copy; 2025 Naipu. All Rights Reserved.
+        &copy; 2025 Naipunya U. All Rights Reserved.
     </footer>
 
 </body>
